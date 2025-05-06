@@ -34,11 +34,14 @@ router.render = (req, res) => {
     // question(검색어) 필터링 (대소문자 구분 없이)
     if (question) {
       const searchTerm = question.toLowerCase();
-      data = data.filter(
-        (item) =>
-          item.question.toLowerCase().includes(searchTerm) ||
-          item.answer.toLowerCase().includes(searchTerm),
-      );
+      data = data.filter((item) => {
+        // answer에서 HTML 태그 제거
+        const cleanedAnswer = item.answer.replace(/<[^>]+>/g, '').toLowerCase();
+        return (
+          item.question.includes(searchTerm) ||
+          cleanedAnswer.includes(searchTerm)
+        );
+      });
     }
 
     const total = data.length;

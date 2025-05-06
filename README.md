@@ -43,24 +43,26 @@
 
 # 1. 저장소 클론
 
-git clone https://github.com/seo-inyoung/kia-faq-clone.git
-cd kia-faq-clone
+`git clone https://github.com/seo-inyoung/kia-faq-clone.git`
+`cd kia-faq-clone`
 
 # 2. 패키지 설치
 
-npm install
+`npm install`
 
 # 또는
 
-yarn install
+`yarn install`
 
 # 3. 개발 서버 실행
 
-npm run dev
+- 해당 명령어를 실행하면 **Next.js 앱(port: 3000)**과 **json-server(port: 9999)**가 동시에 실행됩니다.
+
+`npm run dev`
 
 # 또는
 
-yarn dev
+`yarn dev`
 
 ---
 
@@ -76,5 +78,7 @@ src/
 ├── styles/ # CSS (기능별 분리)
 ├── util/ # API, 유틸 함수
 └── ...
+server.js # json-server 실행 스크립트
+db.json # 목업 데이터 파일
 
 ---

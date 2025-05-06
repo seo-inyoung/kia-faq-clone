@@ -1,6 +1,7 @@
 'use-client';
 import React, { useState } from 'react';
 import HtmlViewer from 'src/components/common/HTMLViewer';
+import 'src/styles/component/faq/faq.css';
 
 export interface FAQItem {
   id: number;

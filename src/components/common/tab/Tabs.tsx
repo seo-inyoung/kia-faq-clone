@@ -1,3 +1,5 @@
+import 'src/styles/component/common/tab.css';
+
 interface TabsProps<T extends string> {
   tabs: Array<{ id: T; label: string }>;
   activeTab: T;

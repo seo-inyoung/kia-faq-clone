@@ -1,4 +1,5 @@
 import React from 'react';
+import 'src/styles/component/common/loadingIndicator.css';
 
 interface LoadingIndicatorProps {
   text?: string;

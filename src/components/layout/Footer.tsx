@@ -4,6 +4,7 @@ import PolicyPopup, {
   PolicyPopupHandles,
 } from 'src/components/common/PolicyPopup';
 import QuickUtil from 'src/components/common/QuickUtil';
+import 'src/styles/component/layout.css';
 
 const Footer: React.FC = () => {
   const policyPopupRef = useRef<PolicyPopupHandles>(null);

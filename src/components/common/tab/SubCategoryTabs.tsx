@@ -1,4 +1,5 @@
 import React from 'react';
+import 'src/styles/component/common/tab.css';
 
 export interface SubCategory {
   categoryID: string;
@@ -33,11 +34,7 @@ const SubCategoryTabs: React.FC<SubCategoryTabsProps> = ({
       </label>
 
       {subcategories.map((subcategory) => (
-        <label
-          key={subcategory.categoryID}
-          className="tab-item"
-          role="presentation"
-        >
+        <label key={subcategory.categoryID} className="tab-item">
           <input
             type="radio"
             name="filter"

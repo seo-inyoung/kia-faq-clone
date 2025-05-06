@@ -1,4 +1,5 @@
 import React from 'react';
+import 'src/styles/component/common/search.css';
 
 interface SearchInfoProps {
   totalCount: number;

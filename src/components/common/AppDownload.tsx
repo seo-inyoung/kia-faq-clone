@@ -1,3 +1,5 @@
+import 'src/styles/component/common/appDownload.css';
+
 const appTypeNames = ['Google', 'AppStore'] as const;
 type AppType = (typeof appTypeNames)[number];
 

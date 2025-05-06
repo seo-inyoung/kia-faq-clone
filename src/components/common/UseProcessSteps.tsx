@@ -1,3 +1,5 @@
+import 'src/styles/component/common/useProcessSteps.css';
+
 interface ProcessStepInfo {
   step: number;
   icon: string;

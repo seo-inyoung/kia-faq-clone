@@ -1,5 +1,6 @@
 import LoadingIndicator from 'src/components/common/LoadingIndicator';
 import FAQListItem, { FAQItem } from 'src/components/faq/FAQListItem';
+import 'src/styles/component/faq/faq.css';
 
 interface FAQListSectionProps {
   faqList: FAQItem[];

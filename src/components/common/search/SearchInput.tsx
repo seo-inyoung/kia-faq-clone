@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import 'src/styles/component/common/search.css';
 
 interface SearchInputProps {
   value: string;

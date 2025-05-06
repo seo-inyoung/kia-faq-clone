@@ -1,3 +1,5 @@
+import 'src/styles/component/common/serviceInquiry.css';
+
 const inquiryTypeNames = ['Download', 'Counsel', 'Talk'] as const;
 type InquiryType = (typeof inquiryTypeNames)[number];
 

@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import 'src/styles/component/layout.css';
 
 const navTypeNames = ['Information', 'Faq', 'News', 'Contact'] as const;
 type NavType = (typeof navTypeNames)[number];

@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚗 wiblebiz FAQ 화면 구현하기
 
-## Getting Started
+## 📋 목차
 
-First, run the development server:
+- [프로젝트 소개](#프로젝트-소개)
+- [주요 기능](#주요-기능)
+- [기술 스택](#기술-스택)
+- [설치 및 실행 방법](#설치-및-실행-방법)
+- [폴더 구조](#폴더-구조)
+- [기타 참고사항](#기타-참고사항)
 
-```bash
+---
+
+## 프로젝트 개요
+
+- **원본 사이트**: [https://wiblebiz.kia.com/FAQ](https://wiblebiz.kia.com/FAQ)
+- **구현 목표**: Next.js + TypeScript 기반의 FAQ 화면 클론 코딩
+
+---
+
+## 주요 기능
+
+- **FAQ 검색**: 2글자 이상 입력 시 실시간 필터링, 2글자 미만 입력 시 안내 다이얼로그 표시
+- **카테고리/소분류 탭**: 탭 UI로 분류 전환
+- **페이징(더보기)**: FAQ가 많을 경우 "더보기" 버튼으로 추가 로딩
+- **모달/다이얼로그**: 에러 안내, 약관 등 모달 컴포넌트 활용
+- **반응형 UI**: 모바일~데스크탑 환경 대응
+
+---
+
+## 기술 스택
+
+- **Next.js 15+**
+- **React 19**
+- **TypeScript**
+- **CSS Modules**
+- **ESLint/Prettier**
+- **json-server**
+
+---
+
+## 설치 및 실행 방법
+
+# 1. 저장소 클론
+
+git clone https://github.com/seo-inyoung/kia-faq-clone.git
+cd kia-faq-clone
+
+# 2. 패키지 설치
+
+npm install
+
+# 또는
+
+yarn install
+
+# 3. 개발 서버 실행
+
 npm run dev
-# or
+
+# 또는
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 폴더 구조
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+src/
+├── app/ # Next.js 라우팅
+├── components/ # UI 컴포넌트
+│ ├── common/ # 공통(재사용) 컴포넌트
+│ ├── faq/ # FAQ 관련 컴포넌트
+│ ├── layout/ # 레이아웃 관련 컴포넌트
+│ └── ...
+├── styles/ # CSS (기능별 분리)
+├── util/ # API, 유틸 함수
+└── ...
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---

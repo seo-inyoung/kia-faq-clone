@@ -1,13 +1,17 @@
 'use client';
+import { useRef } from 'react';
+import PolicyPopup, {
+  PolicyPopupHandles,
+} from 'src/components/common/PolicyPopup';
 import QuickUtil from 'src/components/common/QuickUtil';
 
 const Footer: React.FC = () => {
-  //   const policyPopupRef = useRef();
+  const policyPopupRef = useRef<PolicyPopupHandles>(null);
 
-  const childPolicyBtnEvent = () => {
-    // policyPopupRef.current.openDialog();
+  const hadlePolicyBtnClick = () => {
+    policyPopupRef?.current?.openDialog();
   };
-  const childPrivacyBtnEvent = () => {
+  const handlePrivacyBtnClick = () => {
     window.open('https://privacy.kia.com/overview/full-policy', '_blank'); // KIA 개인정보처리방침 URL
   };
 
@@ -18,10 +22,10 @@ const Footer: React.FC = () => {
         <div className="inner">
           <div className="information">
             <span className="util">
-              <button type="button" onClick={childPrivacyBtnEvent}>
+              <button type="button" onClick={handlePrivacyBtnClick}>
                 <b>개인정보 처리방침</b>
               </button>
-              <button type="button" onClick={childPolicyBtnEvent}>
+              <button type="button" onClick={hadlePolicyBtnClick}>
                 이용약관
               </button>
             </span>
@@ -53,7 +57,7 @@ const Footer: React.FC = () => {
           </div>
           <p className="copyright">© 2023 KIA CORP. All Rights Reserved.</p>
         </div>
-        {/* <PolicyPopup ref={policyPopupRef} /> */}
+        <PolicyPopup ref={policyPopupRef} />
       </footer>
     </>
   );

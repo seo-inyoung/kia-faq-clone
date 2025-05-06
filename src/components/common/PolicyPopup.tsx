@@ -6,9 +6,10 @@ import React, {
 } from 'react';
 
 import { getTermsUseAPI } from 'src/util/API';
-import Modal from './Modal';
-import LoadingIndicator from './LoadingIndicator';
 import { yyyymmdd } from 'src/util/dataUtil';
+import Modal from 'src/components/common/Modal';
+import LoadingIndicator from 'src/components/common/LoadingIndicator';
+import HtmlViewer from 'src/components/common/HTMLViewer';
 
 export interface PolicyPopupHandles {
   openDialog: () => void;
@@ -85,11 +86,7 @@ const PolicyPopup = forwardRef<PolicyPopupHandles, object>((props, ref) => {
           {isLoading ? (
             <LoadingIndicator />
           ) : (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: termsUse[selected]?.contents,
-              }}
-            />
+            <HtmlViewer html={termsUse[selected]?.contents} />
           )}
         </div>
       </div>

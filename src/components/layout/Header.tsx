@@ -9,24 +9,29 @@ type NavType = (typeof navTypeNames)[number];
 interface NavTypeInfo {
   label: string;
   href: string;
+  isExternal: boolean;
 }
 
 const navTypeMap: Record<NavType, NavTypeInfo> = {
   Information: {
     label: '서비스 소개',
     href: 'https://wiblebiz.kia.com/Guide',
+    isExternal: true,
   },
   Faq: {
     label: '자주 묻는 질문',
     href: '/',
+    isExternal: false,
   },
   News: {
     label: '새소식',
     href: 'https://wiblebiz.kia.com/News',
+    isExternal: true,
   },
   Contact: {
     label: '상담문의',
     href: 'https://wiblebiz.kia.com/Counsel',
+    isExternal: true,
   },
 };
 
@@ -81,9 +86,15 @@ const Header: React.FC = () => {
           <ul>
             {navTypeNames.map((navType) => (
               <li key={navType} className={'active'}>
-                <a href={navTypeMap[navType].href} target="_blank">
-                  {navTypeMap[navType].label}
-                </a>
+                {navTypeMap[navType].isExternal ? (
+                  <a href={navTypeMap[navType].href} target="_blank">
+                    {navTypeMap[navType].label}
+                  </a>
+                ) : (
+                  <Link href={navTypeMap[navType].href}>
+                    {navTypeMap[navType].label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

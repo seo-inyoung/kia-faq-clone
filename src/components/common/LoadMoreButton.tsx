@@ -1,3 +1,5 @@
+import 'src/styles/component/common/loadMoreButton.css';
+
 interface LoadMoreButtonProps {
   onClick: () => void;
 }

@@ -1,4 +1,5 @@
 import React, { ReactNode, useEffect, useRef } from 'react';
+import 'src/styles/component/common/modal.css';
 
 interface ModalProps {
   open: boolean;

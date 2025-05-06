@@ -10,6 +10,7 @@ import { yyyymmdd } from 'src/util/dataUtil';
 import Modal from 'src/components/common/Modal';
 import LoadingIndicator from 'src/components/common/LoadingIndicator';
 import HtmlViewer from 'src/components/common/HTMLViewer';
+import 'src/styles/component/common/policyPopup.css';
 
 export interface PolicyPopupHandles {
   openDialog: () => void;

@@ -17,13 +17,14 @@ interface CategoryResponse {
 /**
  * FAQ 카테고리 목록을 가져오는 API
  */
-export const getFAQCategoryList = async (
+export const getFAQCategoryListAPI = async (
   tab: string,
 ): Promise<CategoryResponse[]> => {
   const result = await api({
     method: 'GET',
     url: `/category?tab=${tab}`,
   }).catch((e) => {
+    (document.querySelector('#error') as HTMLDialogElement)?.showModal();
     return e;
   });
 
@@ -63,7 +64,7 @@ interface FAQListResponse {
 /**
  * FAQ 목록을 가져오는 API
  */
-export const getFAQList = async ({
+export const getFAQListAPI = async ({
   offset,
   tab,
   selectedCategory,
@@ -77,6 +78,7 @@ export const getFAQList = async ({
     method: 'GET',
     url,
   }).catch((e) => {
+    (document.querySelector('#error') as HTMLDialogElement)?.showModal();
     return e;
   });
   return result.data;
@@ -98,6 +100,7 @@ export const getTermsUseAPI = async (): Promise<TermUseResponse[]> => {
     method: 'GET',
     url: `/terms?termsClassID=JOIN_SERVICE_USE`,
   }).catch((e) => {
+    (document.querySelector('#error') as HTMLDialogElement)?.showModal();
     return e;
   });
 

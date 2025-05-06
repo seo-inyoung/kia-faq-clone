@@ -67,7 +67,7 @@
 ---
 
 ## 폴더 구조
-
+```
 src/
 ├── app/ # Next.js 라우팅
 ├── components/ # UI 컴포넌트
@@ -80,5 +80,5 @@ src/
 └── ...
 server.js # json-server 실행 스크립트
 db.json # 목업 데이터 파일
-
+```
 ---
